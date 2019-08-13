@@ -18,9 +18,8 @@ class VariablesConfig(object):
         if optional_env_vars:
             for env_var in optional_env_vars:
                 value = os.getenv(env_var)
-                if not value:
-                    value = None
-                setattr(self, env_var, value)
+                if value:
+                    setattr(self, env_var, value)
 
     def validate(self):
         if len(self.missing_env_vars) != 0:
