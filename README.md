@@ -5,6 +5,7 @@
 
 ### Usage examples
 
+**Environment Variables**
 ```bash
 from sesamutils import VariablesConfig
 
@@ -21,6 +22,23 @@ print(config.username)
 
 ```
 
+**Dotdictify**
+```bash
+from sesamutils import Dotdictify
+
+example_dict = {
+    "test": {
+        "my_thing": "hello"
+    }
+}
+
+dot_dict = Dotdictify(example_dict)
+
+print(dot_dict.test.my_thing)
+
+# hello
+
+```
 
 
 ### Installation
