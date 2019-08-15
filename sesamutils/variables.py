@@ -17,7 +17,10 @@ class VariablesConfig(object):
 
         if optional_env_vars:
             for env_var in optional_env_vars:
-                value = os.getenv(env_var)
+                if isinstance(tuple, env_var):
+                    value = os.getenv(env_var[0], env_var[1])
+                else:
+                    value = os.getenv(env_var)
                 if value:
                     setattr(self, env_var, value)
 

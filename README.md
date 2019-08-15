@@ -9,7 +9,7 @@
 from sesamutils import VariablesConfig
 
 required_env_vars = ["username", "password", "hostname"]
-optional_env_vars = ["debug"]
+optional_env_vars = ["debug", ("auth_type", "user")] # Default values can be given to optional environment variables by the use of tuples
 
 config = VariablesConfig(required_env_vars, optional_env_vars=optional_env_vars)
 
