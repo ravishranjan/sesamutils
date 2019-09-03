@@ -41,7 +41,7 @@ print(dot_dict.test.my_thing)
 ```
 **Profiler**
 ```bash
-from profiler import profiler
+from sesamutils import profiler
 
 @profiler
 def get_node_members_and_roles():
