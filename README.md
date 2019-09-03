@@ -41,9 +41,9 @@ print(dot_dict.test.my_thing)
 ```
 **Profiler**
 ```bash
-from profiler import profile
+from profiler import profiler
 
-@profile
+@profiler
 def get_node_members_and_roles():
     <your method definition>
 
