@@ -6,7 +6,7 @@
 ### Usage examples
 
 **Environment Variables**
-```bash
+```python
 from sesamutils import VariablesConfig
 
 required_env_vars = ["username", "password", "hostname"]
@@ -23,7 +23,7 @@ print(config.username)
 ```
 
 **Dotdictify**
-```bash
+```python
 from sesamutils import Dotdictify
 
 example_dict = {
@@ -40,7 +40,11 @@ print(dot_dict.test.my_thing)
 
 ```
 **Profiler**
-```bash
+
+ You can use this to see complete details of execution time taken by a method in your program. 
+ Based on that, you can optimize your python code if required.
+
+```python
 from sesamutils import profiler
 
 @profiler
@@ -65,6 +69,6 @@ ncalls tottime  percall  cumtime  percall filename:lineno(function)
 
 ### Installation
 
-```bash
+```python
 pip install sesamutils
 ```
