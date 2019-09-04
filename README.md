@@ -68,7 +68,7 @@ ncalls tottime  percall  cumtime  percall filename:lineno(function)
 
 **Sesam Logger**
 
- You can use this to save time and lines of codes.It provides the standard customization of root level logging- 
+ You can use this to save time and lines of code. It provides the standard customization of root level logging- 
  configuration and gives you SESAM uniform standard settings.
 
 ```python
