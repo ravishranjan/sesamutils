@@ -8,6 +8,7 @@
 **Environment Variables**
 ```python
 from sesamutils import VariablesConfig
+import sys
 
 required_env_vars = ["username", "password", "hostname"]
 optional_env_vars = ["debug", ("auth_type", "user")] # Default values can be given to optional environment variables by the use of tuples
@@ -41,17 +42,17 @@ print(dot_dict.test.my_thing)
 ```
 **Profiler**
 
- You can use this to see complete details of execution time taken by a method in your program. 
+ You can use this (A profiling decorator) to see complete details of execution time taken by a function in your program. 
  Based on that, you can optimize your python code if required.
 
 ```python
 from sesamutils import profiler
 
 @profiler
-def get_node_members_and_roles():
+def <Name of your method>():
     <your method definition>
 
-# Apply to any function with @profile
+# Apply to any function with @profiler
 # Profiles the function using cProfile, and prints out a report to screen.
 # belwo are few lines for illustration  purpose.
 ncalls tottime  percall  cumtime  percall filename:lineno(function)
