@@ -17,7 +17,7 @@ class VariablesConfig(object):
 
         if optional_env_vars:
             for env_var in optional_env_vars:
-                if isinstance(tuple, env_var):
+                if isinstance(env_var, tuple):
                     value = os.getenv(env_var[0], env_var[1])
                 else:
                     value = os.getenv(env_var)
