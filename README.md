@@ -64,8 +64,23 @@ ncalls tottime  percall  cumtime  percall filename:lineno(function)
 2    0.000    0.000    0.306    0.153 C:\Users\ravish.ranjan\AppData\Local\Programs\Python\Python36\lib\site-packages\urllib3\connectionpool.py:446(urlopen)
 2    0.000    0.000    0.306    0.153 C:\Users\ravish.ranjan\AppData\Local\Programs\Python\Python36\lib\site-packages\urllib3\connectionpool.py:319(_make_request)
 1    0.000    0.000    0.258    0.258 C:\Work\PycharmProjects\node-notification-handler\service\portal.py:34(get_subscription_members)
-..............................
-................................
+```
+
+**Sesam Logger**
+
+ You can use this to save time and lines of codes.It provides the standard customization of root level logging- 
+ configuration and gives you SESAM uniform standard settings.
+
+```python
+from sesamlogger import sesam_logger
+
+logger = sesam_logger('<name of your module or logger>')
+
+# User should provide environment variable "LOG_LEVEL" with valid values else log level will be 'INFO' by default.
+# While logging to screen, timestamp is set to false by default, since sesam-node has it's own. 
+# However if you want to make it enable, then you just need to create instance like this:  
+      logger = sesam_logger('<name of your module or logger>', True)  ## setting True to optional parameter timestamp.     
+
 ```
 
 ### Installation
