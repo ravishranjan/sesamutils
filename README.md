@@ -72,14 +72,14 @@ ncalls tottime  percall  cumtime  percall filename:lineno(function)
  configuration and gives you SESAM uniform standard settings.
 
 ```python
-from sesamlogger import sesam_logger
+from sesamutils import sesam_logger
 
 logger = sesam_logger('<name of your module or logger>')
 
-# User should provide environment variable "LOG_LEVEL" with valid values else log level will be 'INFO' by default.
+# User can provide environment variable "LOG_LEVEL" with valid values else log level will be 'INFO' by default.
 # While logging to screen, timestamp is set to false by default, since sesam-node has it's own. 
 # However if you want to make it enable, then you just need to create instance like this:  
-      logger = sesam_logger('<name of your module or logger>', True)  ## setting True to optional parameter timestamp.     
+      logger = sesam_logger('<name of your module or logger>', timestamp=True)     
 
 ```
 

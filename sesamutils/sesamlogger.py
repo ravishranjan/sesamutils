@@ -4,19 +4,17 @@ import os
 
 def sesam_logger(logger_name, timestamp=False):
     logger = logging.getLogger(logger_name)
-    level = None
-    if os.getenv('LOG_LEVEL') is not None:
-        level = logging.getLevelName(os.getenv('LOG_LEVEL').upper())
+    log_level = os.getenv('LOG_LEVEL')
+    level = logging.getLevelName(log_level.upper()) if log_level is not None else None
     stdout_handler = logging.StreamHandler()
-    if timestamp:
-        stdout_handler.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
-    else:
-        stdout_handler.setFormatter(logging.Formatter('%(name)s - %(levelname)s - %(message)s'))
-
+    stdout_handler.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+                                                  if timestamp else '%(name)s - %(levelname)s - %(message)s'))
     logger.addHandler(stdout_handler)
     if not isinstance(level, int):
-        logger.warning("Unsupported value or no LOG_LEVEL provided.Hence, setting default log level to 'INFO'")
+        logger.warning("Unsupported value or no LOG_LEVEL provided. Hence, setting default log level to 'INFO'")
         level = logging.INFO
     logger.setLevel(level)
     return logger
+
+
 
