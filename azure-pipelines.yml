@@ -36,7 +36,7 @@ steps:
 #    pytest
 #  displayName: 'pytest'
 
-- script: 'python setup.py bdist_wheel -v $(build.buildId)'
+- script: 'python setup.py bdist_wheel'
   displayName: 'Build package'
 
 - task: TwineAuthenticate@0
