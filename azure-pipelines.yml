@@ -43,5 +43,8 @@ steps:
   inputs:
     externalFeeds: PyPi
 
+- script: 'cat $(PYPIRC_PATH)'
+  displayName: Log twine config content
+  
 - script: 'twine upload -r PyPi --config-file $(PYPIRC_PATH) dist/*'
   displayName: Upload to PyPi
