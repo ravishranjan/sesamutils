@@ -4,7 +4,9 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
 
 trigger:
-- master
+  branches:
+    include:
+    - master
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -40,4 +42,5 @@ steps:
     externalFeeds: PyPi
 
 - script: 'twine upload dist/*'
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
   displayName: Upload to PyPi
