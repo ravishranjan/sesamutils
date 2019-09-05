@@ -25,7 +25,6 @@ steps:
 
 - script: |
     python -m pip install --upgrade pip
-    pip install -r requirements.txt
     pip install twine
     pip install setuptools
     pip install wheel
@@ -45,5 +44,4 @@ steps:
     externalFeeds: PyPi
 
 - script: 'twine upload --config-file $(PYPIRC_PATH) dist/*'
-  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
   displayName: Upload to PyPi
