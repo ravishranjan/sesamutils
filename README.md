@@ -1,5 +1,7 @@
 # SesamUtils
 
+[![Build Status](https://dev.azure.com/sesam-community/Community%20Python%20Packages/_apis/build/status/sesam-community.sesamutils?branchName=master)](https://dev.azure.com/sesam-community/Community%20Python%20Packages/_build/latest?definitionId=1&branchName=master)
+
 **Python module to simplify common tasks when developing microservices for the Sesam integration platform.**
 
 
