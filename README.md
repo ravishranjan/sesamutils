@@ -8,6 +8,9 @@
 ### Usage examples
 
 **Environment Variables**
+
+You can use the VariablesConfig class to load environment variables into your service. It requires a list of required variables. It also support an optional list of variables as a second argument.
+
 ```python
 from sesamutils import VariablesConfig
 import sys
@@ -26,6 +29,9 @@ print(config.username)
 ```
 
 **Dotdictify**
+
+A class to help traversing and modifying large nested dictionaries. Lets you navigate by dot notation.
+
 ```python
 from sesamutils import Dotdictify
 
