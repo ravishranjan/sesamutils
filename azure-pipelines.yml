@@ -46,5 +46,5 @@ steps:
 - script: 'cat $(PYPIRC_PATH)'
   displayName: Log twine config content
   
-- script: 'twine upload -r sesamutils --config-file $(PYPIRC_PATH) dist/*'
+- script: 'twine upload -r pypi --config-file $(PYPIRC_PATH) dist/*'
   displayName: Upload to PyPi
