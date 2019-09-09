@@ -17,6 +17,7 @@ def test_required_variables_is_set():
     assert config.var1 == "value1"
     assert config.var2 == "value2"
 
+
 def test_optional_variable_with_default_value():
 
     required_vars = ["var1", "var2"]
