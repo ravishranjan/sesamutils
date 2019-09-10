@@ -3,6 +3,8 @@ import os
 
 
 def sesam_logger(logger_name, timestamp=False):
+    if logger_name is None or logger_name is '':
+        raise ValueError('Please provide the valid logger name.')
     logger = logging.getLogger(logger_name)
     log_level = os.getenv('LOG_LEVEL')
     level = logging.getLevelName(log_level.upper()) if log_level is not None else None
@@ -11,7 +13,7 @@ def sesam_logger(logger_name, timestamp=False):
                                                   if timestamp else '%(name)s - %(levelname)s - %(message)s'))
     logger.addHandler(stdout_handler)
     if not isinstance(level, int):
-        logger.warning("Unsupported value or no LOG_LEVEL provided. Hence, setting default log level to 'INFO'")
+        logger.warning("Unsupported value or no LOG_LEVEL provided. Hence, setting default log level to INFO.")
         level = logging.INFO
     logger.setLevel(level)
     return logger

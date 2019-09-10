@@ -23,5 +23,6 @@ setup(
     ],
     author='Anders Borud',
     url='https://github.com/sesam-community/',
-    packages=find_packages()
+    packages=find_packages(),
+    install_requires=['pytest', 'testfixtures']
 )
